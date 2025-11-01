@@ -53,6 +53,7 @@ func _on_body_entered(body: Node2D) -> void:
 	hp -= 1
 	print(hp)
 	$HitSFX.play()
+	$AnimatedSprite2D/AnimationPlayer.play("hit")
 	hit.emit(hp)
 	if hp < 1:
 		print(hp)
