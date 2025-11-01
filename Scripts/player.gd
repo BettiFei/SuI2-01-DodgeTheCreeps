@@ -49,14 +49,14 @@ func _process(delta: float) -> void:
 		sprite.flip_v = velocity.y > 0
 
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(_body: Node2D) -> void:
 	hp -= 1
-	print(hp)
+	#print(hp)
 	$HitSFX.play()
 	$AnimatedSprite2D/AnimationPlayer.play("hit")
 	hit.emit(hp)
-	if hp < 1:
-		print(hp)
+	if hp == 0:
+		#print(hp)
 		hide()
 		died.emit()
 		$CollisionShape2D.set_deferred("disabled", true)

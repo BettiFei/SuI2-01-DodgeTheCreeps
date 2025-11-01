@@ -12,7 +12,7 @@ func _ready() -> void:
 
 
 func game_over() -> void:
-	print("game over reached")
+	#print("game over reached")
 	$ScoreTimer.stop()
 	$MobTimer.stop()
 	$HUD.show_game_over()
