@@ -20,6 +20,9 @@ func show_game_over():
 
 func update_score(score):
 	$ScoreLabel.text = str(score)
+	
+func update_hp(hp):
+	$HPLabel.text = str(hp)
 
 func _on_start_button_pressed() -> void:
 	$StartButton.hide()

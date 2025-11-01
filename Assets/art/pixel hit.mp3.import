@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dv3m5rj5mex2y"
+path="res://.godot/imported/pixel hit.mp3-753886593c3bfbd37efb137c480052f6.mp3str"
+
+[deps]
+
+source_file="res://Assets/art/pixel hit.mp3"
+dest_files=["res://.godot/imported/pixel hit.mp3-753886593c3bfbd37efb137c480052f6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

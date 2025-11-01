@@ -2,12 +2,13 @@ extends Node
 
 @export var mob_scene : PackedScene
 @onready var player = $Player
+var start_hp : int
 
 var score
 
 
 func _ready() -> void:
-	pass
+	start_hp = player.hp
 
 
 func game_over() -> void:
@@ -20,9 +21,11 @@ func game_over() -> void:
 	
 func new_game():
 	score = 0
+	player.hp = start_hp
 	player.start($StartPosition.position)
 	$StartTimer.start()
 	$HUD.update_score(score)
+	$HUD.update_hp(player.hp)
 	$HUD.show_message("Get Ready")
 	print(get_tree().get_nodes_in_group("mobs").size())
 	get_tree().call_group("mobs", "queue_free")

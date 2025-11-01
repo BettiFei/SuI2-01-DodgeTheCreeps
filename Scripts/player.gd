@@ -3,12 +3,14 @@ extends Area2D
 
 @onready var sprite = $AnimatedSprite2D
 
+@export var hp : int = 3
 @export var speed : float = 400.0
 
 var screen_size
 
 
 signal hit
+signal died
 
 
 # Called when the node enters the scene tree for the first time.
@@ -48,9 +50,15 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	hide()
-	hit.emit()
-	$CollisionShape2D.set_deferred("disabled", true)
+	hp -= 1
+	print(hp)
+	$HitSFX.play()
+	hit.emit(hp)
+	if hp < 1:
+		print(hp)
+		hide()
+		died.emit()
+		$CollisionShape2D.set_deferred("disabled", true)
 
 
 func start(pos):

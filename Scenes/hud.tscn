@@ -13,18 +13,24 @@ events = [SubResource("InputEventAction_fccik")]
 script = ExtResource("1_fccik")
 
 [node name="ScoreLabel" type="Label" parent="."]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -22.5
-offset_right = 22.5
+offset_right = 45.0
 offset_bottom = 78.0
-grow_horizontal = 2
 theme_override_fonts/font = ExtResource("1_e0onf")
 theme_override_font_sizes/font_size = 64
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="HPLabel" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("1_e0onf")
+theme_override_font_sizes/font_size = 64
+text = "0"
 
 [node name="Message" type="Label" parent="."]
 anchors_preset = 8
